@@ -5,8 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Producto Estrella</title>
+  
+  <style>
+    
+    body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+    
+    .dark-mode {
+      background-color: black;
+      color: white;
+    }
+    
+    h1   {color: blue;}
+    p    {color: red;}
+    .right {float: right;}
+
+  </style>
+  
+
 </head>
 <body>
+  <button id="btnToggle" onclick="myFunction()" class="right" >Toggle dark mode</button>
+
   
   <section class="producto-estrella">
     <div class="producto">
@@ -15,6 +39,27 @@
       <a href="https://www.apple.com/">
         <img src="images/macintosh.jpg" alt="Producto Estrella">
       </a>
+      <!-- Puntuacion -->
+      <section class="rating-wrapper">
+        <div class="rating-box">
+          <fieldset class="star-rating js-star-rating"> <!--  El elemento fieldset (grupo de campos) permite organizar en grupos los campos de un formulario. -->
+            <legend class="rating-label">Puntuación:</legend>
+            <div class="js-rating-container">
+              <input id="rating1-2" name="rating" type="radio" value="1">
+              <label for="rating1-2" class=""><span>1 &#10025;</span></label>
+              <input id="rating2-2" name="rating" type="radio" value="2">
+              <label for="rating2-2" class=""><span>2 &#10025;</span></label>
+              <input id="rating3-2" name="rating" type="radio" value="3">
+              <label for="rating3-2" class=""><span>3 &#10025;</span></label>
+              <input id="rating4-2" name="rating" type="radio" value="4">
+              <label for="rating4-2" class=""><span>4 &#10025;</span></label>
+              <input id="rating5-2" name="rating" type="radio" value="5">
+              <label for="rating5-2" class=""><span>5 &#10025;</span></label>
+            </div>
+          </fieldset>
+        </div>
+      </section>
+      <!-- Puntuacion -->
       <h2>Caracteristicas del producto</h2>
       <p>
         Nuestro producto estrella viene integrado con capacidades nunca antes vista.<br>
@@ -61,4 +106,13 @@
   </section>
   
 </body>
+
+<script>
+  function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
+</script>
+
+
 </html>
