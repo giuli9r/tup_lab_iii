@@ -5,31 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Producto Estrella</title>
-  
-  <style>
-    
-    body {
-      padding: 25px;
-      background-color: white;
-      color: black;
-      font-size: 25px;
-    }
-    
-    .dark-mode {
-      background-color: black;
-      color: white;
-    }
-    
-    h1   {color: blue;}
-    p    {color: red;}
-    .right {float: right;}
+	<link href="estilos/style.css" rel="stylesheet" type="text/css" />
 
-  </style>
-  
 
 </head>
 <body>
-  <button id="btnToggle" onclick="myFunction()" class="right" >Toggle dark mode</button>
+  <button id="btnToggle" onclick="darkMode()" class="right" >dark mode</button>
 
   
   <section class="producto-estrella">
@@ -40,11 +21,11 @@
         <img src="images/macintosh.jpg" alt="Producto Estrella">
       </a>
       <!-- Puntuacion -->
-      <section class="rating-wrapper">
+      <!-- <section class="rating-wrapper">
         <div class="rating-box">
-          <fieldset class="star-rating js-star-rating"> <!--  El elemento fieldset (grupo de campos) permite organizar en grupos los campos de un formulario. -->
-            <legend class="rating-label">Puntuación:</legend>
-            <div class="js-rating-container">
+          <fieldset class="starw-rating"> 
+            <legend class="rating-label">Puntuación:</legend> 
+            <div class="rating-container">
               <input id="rating1-2" name="rating" type="radio" value="1">
               <label for="rating1-2" class=""><span>1 &#10025;</span></label>
               <input id="rating2-2" name="rating" type="radio" value="2">
@@ -58,8 +39,46 @@
             </div>
           </fieldset>
         </div>
-      </section>
-      <!-- Puntuacion -->
+      </section> -->
+      <!--  El elemento fieldset (grupo de campos) permite organizar en grupos los campos de un formulario. -->
+      <!-- El elemento legend crea un título para un grupos los campos (fieldset) de un formulario. -->
+      <!-- end Puntuacion -->
+
+      <!-- Le pedi a chatGPT que me haga un sistema de rating con javascript incluido - Puntuacion GPT -->
+      <div id="rating-section">
+        <h2>Puntuacion de Macintosh 2da Gen.</h2>
+        <div id="stars">
+          <span class="star" onclick="rateProduct(1)">&#9733;</span>
+          <span class="star" onclick="rateProduct(2)">&#9733;</span>
+          <span class="star" onclick="rateProduct(3)">&#9733;</span>
+          <span class="star" onclick="rateProduct(4)">&#9733;</span>
+          <span class="star" onclick="rateProduct(5)">&#9733;</span>
+        </div>
+        <p id="selected-rating"></p>
+      </div>
+      
+      <script>
+        function rateProduct(rating) {
+          // Reset all stars to unfilled
+          const stars = document.querySelectorAll(".star");
+          stars.forEach((star) => {
+            star.style.color = "grey";
+          });
+      
+          // Fill selected stars
+          const selectedStars = document.querySelectorAll(".star:nth-child(-n+" + rating + ")");
+          selectedStars.forEach((star) => {
+            star.style.color = "black";
+          });
+      
+          // Display selected rating
+          const selectedRatingText = `${rating} de 5 estrellas!`;
+          document.getElementById("selected-rating").textContent = selectedRatingText;
+        }
+      </script>
+
+      <!-- end Puntuacion GPT -->
+
       <h2>Caracteristicas del producto</h2>
       <p>
         Nuestro producto estrella viene integrado con capacidades nunca antes vista.<br>
@@ -108,7 +127,7 @@
 </body>
 
 <script>
-  function myFunction() {
+  function darkMode() {
     var element = document.body;
     element.classList.toggle("dark-mode");
   }
