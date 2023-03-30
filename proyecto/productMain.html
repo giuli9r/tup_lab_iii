@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Producto Estrella</title>
-	<link href="estilos/style.css" rel="stylesheet" type="text/css" />
+	<link href="estilos/index.css" rel="stylesheet" type="text/css" />
 
 
 </head>
+<button id="btnToggle" onclick="darkMode()" class="right" >dark mode</button>
 <body>
-  <button id="btnToggle" onclick="darkMode()" class="right" >dark mode</button>
 
   
   <section class="producto-estrella">
@@ -59,24 +59,23 @@
       
       <script>
         function rateProduct(rating) {
-          // Reset all stars to unfilled
+          // Resetea las estrellas a vacias
           const stars = document.querySelectorAll(".star");
           stars.forEach((star) => {
             star.style.color = "grey";
           });
       
-          // Fill selected stars
+          // Rellena estrellas seleccionadas
           const selectedStars = document.querySelectorAll(".star:nth-child(-n+" + rating + ")");
           selectedStars.forEach((star) => {
             star.style.color = "black";
           });
       
-          // Display selected rating
+          // Muestra rating seleccionado
           const selectedRatingText = `${rating} de 5 estrellas!`;
           document.getElementById("selected-rating").textContent = selectedRatingText;
         }
       </script>
-
       <!-- end Puntuacion GPT -->
 
       <h2>Caracteristicas del producto</h2>
