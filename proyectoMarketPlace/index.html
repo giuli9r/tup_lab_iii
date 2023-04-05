@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>E.Free Market</title>
+	<link href="estilos/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="grid-layout">
+		<!-- cabecera -->
+		<div class="caja" id="caja1">
+			
+			<header>
+				<div class="logo">
+					<a href="#">E.Free Market </a>
+				</div>
+			</div>
+		</header>
+		<!-- Welcome -->
+		<div class="caja" id="caja2">
+				<div class="bienvenido">
+					<h1>Bienvenido a Free Market Inc.</h1>
+					<p>El libre mercado global más importante de América</p>
+					<a href="search.html" class="btn">Busca mas productos!</a> &#x1f50d;&#xfe0e;<br>
+					<a href="admin.html">Administracion</a>
+				</div>
+		</div>
+		<!-- imagen -->
+		<div class="caja" id="caja3">
+			<img id="imagen-notebook" class="imagen-notebook" src="images/wallp.jpeg">
+		</div>
+		
+		<!-- menu -->
+		<div class="caja" id="caja4">
+			<div id="grid-container">
+				<div class="producto1 caja" >
+					<img src="images/macintosh2.png"></br>
+					<a href="productMain.html">Producto Mac 1era Generacion </a>
+					<p>
+						Producto Destacado! 30% de descuento </br>
+						&#x26a1;&#xfe0e; Oferta Relampago &#x26a1;&#xfe0e;
+					</p>
+				</div>
+				<div class="producto2 caja" >
+					<img  src="images/notebook1.jpeg" ></br>
+					<a href="productMain.html">Producto Mac 2da Generacion </a>
+				</div>
+				<div class="producto3 caja" >
+					<img src="images/notebook2.jpeg"></br>
+					<a href="productMain.html">Producto Mac 3era Generacion </a>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Contacto -->
+		<div class="caja" id="caja5">
+			
+			<section class="contacto" class="caja4">
+				<h2>Contacto</h2>
+				<form>
+					<label for="nombre">Nombre:</label>
+					<input type="text" id="nombre" name="nombre" required><br><br>
+					
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required><br><br>
+					
+					<textarea id="msj" name="msj"  placeholder="Mensaje.." required></textarea><br>
+					<button id="enviar" type="submit">Enviar</button>
+					
+				</form>
+			</section>
+		</div>
+		
+	</div>
+</body>
+</html>
