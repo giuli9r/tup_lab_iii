@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            width: 100vw;
+        }
+
+        #grid-layout {
+            display: grid;
+            grid-template-areas: 'cabecera cabecera'
+                            'menu menu'
+                            'imagen info'
+                            'feedback feedback';
+            grid-template-rows: 10% 10% auto 20%;
+            grid-template-columns: 20% auto;
+            height: 700px;
+        }
+
+        .caja {
+            border: 10px solid;
+            text-align: center;
+        }
+
+        #caja1 {
+            grid-area: cabecera;
+        }
+
+        #caja2 {
+            grid-area: menu;
+        }
+
+        #caja3 {
+            grid-area: imagen;
+        }
+
+        #caja4 {
+            grid-area: info;
+        }
+
+        #caja5 {
+            grid-area: feedback;
+        }
+
+        #imagen-notebook {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="grid-layout">
+    <div class="caja" id="caja1">Cabecera</div>
+    <div class="caja" id="caja2">Menu</div>
+    <div class="caja" id="caja3"><img id="imagen-notebook" src="notebook1.jpg"></div>
+    <div class="caja" id="caja4">Descripción</div>
+    <div class="caja" id="caja5">Feedback</div>
+</div>
+</body>
+</html>
