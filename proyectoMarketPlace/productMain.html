@@ -100,7 +100,7 @@
   </section>
   
   <!-- Comentarios Destacados  -->
-  <section class="comentarios">
+  <section id="container-comentarios" class="container-comentarios">
     <h2>Comentarios de nuestros clientes</h2>
     <div class="comentario">
       <img src="images/avatar.png" style="max-height: 45px; min-width: 45px;" alt="Avatar 1">
@@ -122,6 +122,23 @@
     </div>
     
   </section>
+
+  		<!-- Mensaje -->
+      <div class="container-mensaje" id="container-mensaje">
+			
+        <section class="caja-msj">
+          <h2>Deje su comentario</h2>
+          <!-- <form> -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            
+            <textarea id="txt-msj" name="txt-msj"  placeholder="Mensaje.." required></textarea><br>
+            <button id="enviar" >Enviar</button>
+            
+          <!-- </form> -->
+        </section>
+      </div>
+
   
 </body>
 
@@ -131,6 +148,7 @@
     element.classList.toggle("dark-mode");
   }
 </script>
+<script src="script/comentario.js" defer></script>
 
 
 </html>
