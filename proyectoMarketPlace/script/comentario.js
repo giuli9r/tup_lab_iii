@@ -6,8 +6,11 @@ let postComment = function () {
     let cantComentarios = document.getElementById("container-comentarios").childElementCount;
     let hoy = new Date().toLocaleDateString()
     let texto = document.getElementById("txt-msj").value ? document.getElementById("txt-msj").value : "Me dejó sin palabras..." ;
-    let section = document.getElementById('container-comentarios');
+    let section = document.getElementById('container-comentario');
     
+    let html1 = document.createElement( 'div' ); // add class "comentario"
+    html1.classList.add('comentarios123');
+
     let html = `<div class="comentario">`;
     html += `<img src="images/avatar.png" style="max-height: 45px; min-width: 45px;" alt="Avatar ${cantComentarios}.">`;
     html += `<h3 class="nombre"> ${nombre} </h3>
@@ -16,7 +19,9 @@ let postComment = function () {
             </div> `;
     html += `</div> `;
 
-    section.appendChild(html);
+    console.log(html);
+    // html1.innerText = html;
+    // section.appendChild(html1);
     console.log("Comentario agregado");
 
 }
