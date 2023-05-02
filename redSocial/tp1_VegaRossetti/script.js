@@ -17,7 +17,7 @@ let followUser = function () {
 let login = function () {
     let inputUser = document.getElementById("inpUsuario").value;
     if( inputUser != '') {
-        if( inputUser == 'Jane Doe') {alert("Sesión ya iniciada."); return;}
+        if( inputUser == 'Jane Doe') {alert("Sesión ya iniciada."); document.getElementById("inpUsuario").value = ''; return; }
         alert("Usuario no encontrado.");
         document.getElementById("inpUsuario").value = '';
     }
