@@ -84,6 +84,9 @@ body{
   font-size: 25px;
   color: white;
 }
+.shadow {
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
 
 #lateral-izquierdo{
   grid-area: post;

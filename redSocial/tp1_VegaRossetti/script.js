@@ -14,6 +14,13 @@ let followUser = function () {
     console.log("siguiendo...");
 }
 
+let sombrear = function(){
+    btnSeguir.classList.add("shadow");
+}
+let aclarar = function(){
+    btnSeguir.classList.remove("shadow");
+}
+
 let login = function () {
     let inputUser = document.getElementById("inpUsuario").value;
     if( inputUser != '') {
@@ -45,6 +52,8 @@ let agregarComentario = function (evento) {
 // BOTONES
 let btnSeguir = document.getElementById("btnSeguir");
 btnSeguir.addEventListener('click', followUser);
+btnSeguir.addEventListener('mouseover', sombrear);
+btnSeguir.addEventListener('mouseout', aclarar);
 
 let btnLogin = document.getElementById("btnLogin");
 btnLogin.addEventListener('click', login);
