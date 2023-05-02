@@ -27,29 +27,19 @@ let login = function () {
     console.log("logueado...");
 }
 
-
 let agregarComentario = function (evento) {
     //Evito que recargue la página
     evento.preventDefault();
 
     //Obtengo los valores ingresados
     let textoComentario =  document.getElementById('txtComentario').value
-    // let textoComentario = document.getElementById('texto-comentario').value;
-    // let puntaje = document.getElementById('puntaje-feedback').value;
-
-    // //Agrego el feedback a la página  agregar a parteComentarios
-
+    //Agrego el feedback a la página
     let texto = document.createTextNode('Anónimo - ' + textoComentario);
     let parrafo = document.createElement('p')
     parrafo.appendChild(texto);
-
     document.getElementById('parteComentarios').appendChild(parrafo);
-
-    console.log(textoComentario);
-    //Reinicio los valores de los input
     document.getElementById('txtComentario').value = '';
 }
-
 
 
 // BOTONES
