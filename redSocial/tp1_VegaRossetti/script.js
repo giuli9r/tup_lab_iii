@@ -1,4 +1,4 @@
-console.log("loaded");
+console.log("Script loaded");
 
 // FUNCIONES
 let followUser = function () {
@@ -28,6 +28,29 @@ let login = function () {
 }
 
 
+let agregarComentario = function (evento) {
+    //Evito que recargue la página
+    evento.preventDefault();
+
+    //Obtengo los valores ingresados
+    let textoComentario =  document.getElementById('txtComentario').value
+    // let textoComentario = document.getElementById('texto-comentario').value;
+    // let puntaje = document.getElementById('puntaje-feedback').value;
+
+    // //Agrego el feedback a la página  agregar a parteComentarios
+
+    let texto = document.createTextNode('Anónimo - ' + textoComentario);
+    let parrafo = document.createElement('p')
+    parrafo.appendChild(texto);
+
+    document.getElementById('parteComentarios').appendChild(parrafo);
+
+    console.log(textoComentario);
+    //Reinicio los valores de los input
+    document.getElementById('txtComentario').value = '';
+}
+
+
 
 // BOTONES
 let btnSeguir = document.getElementById("btnSeguir");
@@ -36,5 +59,5 @@ btnSeguir.addEventListener('click', followUser);
 let btnLogin = document.getElementById("btnLogin");
 btnLogin.addEventListener('click', login);
 
-
-
+let btnComentar = document.getElementById('boton-comentar');
+btnComentar.addEventListener('click', agregarComentario);

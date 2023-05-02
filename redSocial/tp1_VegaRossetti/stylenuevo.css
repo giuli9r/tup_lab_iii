@@ -111,6 +111,7 @@ body{
 }
 #likes{
   font-size: 25px;
+  margin:10px;
 }
 .right{
   display: flex;
