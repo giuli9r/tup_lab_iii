@@ -8,7 +8,7 @@ body{
   grid-template-areas: 'arriba arriba arriba'
                       'medio medio medio'
                       'post post sobremi';
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto ;
   grid-template-rows: 100px 400px auto auto;
   height: auto;
   border: 1px black solid;
@@ -17,17 +17,6 @@ body{
 .colorAzulClaro{
  background-color: rgba(14, 122, 237, 0.951);
 }
-
-.container-comentar{
-  padding: 12px;
-  margin: 10px;
-}
-
-.unfollow{
-  font-size: 14px !important;
-  background-color:rgba(194, 66, 57, 0.951) !important;
-}
-
 #parteArriba{
   grid-area: arriba;
   display: flex;
@@ -85,13 +74,11 @@ body{
   color: white;
 }
 
-#parteAbajo{
+#lateral-izquierdo{
   grid-area: post;
   background-color: white;
-  margin: 0px 0px 10px 150px;
+  margin: 0px 70px 10px 150px;
   border-radius: 20px;
-  display: flex;
-  align-items:center;
 
 }
 #c6{  
@@ -130,17 +117,30 @@ body{
   height: 30px;
   color: white;
 }
-#login{
-  border: none;
-  font-size: 15px;
-  border-radius: 4px;
-  height: 22px;
-}
 #txtComentario{
   border: none;
   border-radius: 3px;
   width: 530px;
 }
+#abajo{
+  display: flex;
+  justify-content: space-around;
+}
 #lateral-derecho{
-  /*falta esta parte se me quemaron los cables*/
+  grid-area: sobremi;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  width: 440px;
+  height: 300px;
+
+}
+#sobre-mi{
+  font-size: 25px;
+  text-align: start;
+  margin: 20px 0px 0px 20px;
+  color: rgb(147, 147, 153)
+}
+#parrafo-largo{
+  margin: 20px;
 }
