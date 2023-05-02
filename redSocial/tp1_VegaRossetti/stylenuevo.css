@@ -17,6 +17,17 @@ body{
 .colorAzulClaro{
  background-color: rgba(14, 122, 237, 0.951);
 }
+
+.container-comentar{
+  padding: 12px;
+  margin: 10px;
+}
+
+.unfollow{
+  font-size: 14px !important;
+  background-color:rgba(194, 66, 57, 0.951) !important;
+}
+
 #parteArriba{
   grid-area: arriba;
   display: flex;
@@ -108,7 +119,6 @@ body{
 }
 #boton-eliminar{
   border: none;
-  justify-items: start;
 }
 #nombre-color{
   color: rgba(14, 122, 237, 0.951);
