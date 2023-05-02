@@ -27,8 +27,7 @@ let login = function () {
         if( inputUser == 'Jane Doe') {alert("Sesión ya iniciada."); document.getElementById("inpUsuario").value = ''; return; }
         alert("Usuario no encontrado.");
         document.getElementById("inpUsuario").value = '';
-    }
-    else {
+    }  else {
         alert("Por favor, ingrese un usuario.");
     }
     console.log("logueado...");
@@ -39,7 +38,8 @@ let agregarComentario = function (evento) {
     evento.preventDefault();
 
     //Obtengo los valores ingresados
-    let textoComentario =  document.getElementById('txtComentario').value
+    let textoComentario =  document.getElementById('txtComentario').value.trim();
+    if (textoComentario == '') return;
     //Agrego el feedback a la página
     let texto = document.createTextNode('Anónimo - ' + textoComentario);
     let parrafo = document.createElement('p')
