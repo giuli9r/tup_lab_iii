@@ -1,9 +1,13 @@
 console.log("Script loaded");  // init
 
-// VARIABLES GLOBALES
+/**
+ * VARIABLES GLOBALES
+ */
 var _pressedBtnMeGusta = false;
 
-// FUNCIONES
+/**
+ * FUNCIONES
+ */
 let followUser = function () {
 
     if( btnSeguir.textContent == "Seguir") {
@@ -119,6 +123,7 @@ let agregarComentario = function (evento) {
     parrafo.appendChild(texto);
     document.getElementById('parteComentarios').appendChild(parrafo);
     document.getElementById('txtComentario').value = '';
+    document.getElementById('inpUsuario').value = '';
 }
 
 let incrementaMeGusta = function () {
@@ -130,7 +135,15 @@ let incrementaMeGusta = function () {
     }
 }
 
-// BOTONES
+let eliminarComentario = function () {
+    let btnEliminar = document.getElementById('boton-eliminar');
+    btnEliminar.parentElement.remove();
+}
+
+
+/**
+ * BOTONES
+ */
 let btnSeguir = document.getElementById("btnSeguir");
 btnSeguir.addEventListener('click', followUser);
 btnSeguir.addEventListener('mouseover', sombrear);
@@ -151,6 +164,8 @@ btnAceptar.addEventListener('click', esconderModal);
 let btnClose = document.getElementById('btnClose');
 btnClose.addEventListener('click', esconderModal);
 
+let btnEliminar = document.getElementById('boton-eliminar');
+btnEliminar.addEventListener('click', eliminarComentario)
 // test modal
 // $('#myModal').on('shown.bs.modal', function () {
 //     $('#myInput').trigger('focus')
