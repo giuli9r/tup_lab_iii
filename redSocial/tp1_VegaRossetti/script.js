@@ -37,13 +37,64 @@ let login = function () {
 
 let modalTextoVacio = function(){
 
+    var element = document.getElementById("modal2");
+    element.removeAttribute("hidden");
+    
+    let modalbody = document.getElementById('modalbody1');
+    let texto = document.createTextNode( "No puede ingresar un comentario vacío.");
+    let parrafo = document.createElement('p')
+    parrafo.appendChild(texto);
+    modalbody.appendChild(parrafo);
+    goTo();
+
+
+    // let p = document.getElementById('whatever');
+    // element.classList.remove("hidden");
+    // $('#myModal').on('shown.bs.modal', function () {
+    //     $('#myInput').trigger('focus')
+    //   })
+
+    //   $('#myModal').modal.show();
+    // $('#myModal').modal({ show: true});
+    // $('#myModal').modal('toggle');
+    // let myModal = bootstrap.Modal.getOrCreateInstance("#myModal");
+    // myModal.show();
 }
 
 let modalUserVacio = function(){
 
+    let modalbody = document.getElementById('modalbody1');
+    let texto = document.createTextNode( "No puede comentar en forma anónima, necesita ingresar un Usuario.");
+    let parrafo = document.createElement('p')
+    parrafo.appendChild(texto);
+    modalbody.appendChild(parrafo);
+    
+    var element = document.getElementById("modal2");
+    element.removeAttribute("hidden");
+    goTo();
+
+
+    // element.classList.remove("hidden");
+    // $('#myModal').on('shown.bs.modal', function () {
+    //     $('#myInput').trigger('focus')
+    //   });
+    // $('#myModal').modal('show')    
+    // let myModal = bootstrap.Modal.getOrCreateInstance("#myModal");
+    // myModal.show();
 }
 
+let esconderModal = function () {
+    var element = document.getElementById("modal2");
+    element.setAttribute("hidden", "");
+    
+    var modalbody = document.getElementById("modalbody1");
+    modalbody.innerHTML = "";
 
+}
+
+function goTo() {
+    $('html,body').scrollTop(0);
+}
 let agregarComentario = function (evento) {
     //Evito que recargue la página
     evento.preventDefault();
@@ -63,7 +114,7 @@ let agregarComentario = function (evento) {
     }
 
     //Agrego el feedback a la página
-    let texto = document.createTextNode('Anónimo - ' + textoComentario);
+    let texto = document.createTextNode(inputUser + ' - ' + textoComentario);
     let parrafo = document.createElement('p')
     parrafo.appendChild(texto);
     document.getElementById('parteComentarios').appendChild(parrafo);
@@ -93,3 +144,14 @@ btnComentar.addEventListener('click', agregarComentario);
 
 let btnMeGusta = document.getElementById('btnMeGusta');
 btnMeGusta.addEventListener('click', incrementaMeGusta);
+
+let btnAceptar = document.getElementById('btnAceptar');
+btnAceptar.addEventListener('click', esconderModal);
+
+let btnClose = document.getElementById('btnClose');
+btnClose.addEventListener('click', esconderModal);
+
+// test modal
+// $('#myModal').on('shown.bs.modal', function () {
+//     $('#myInput').trigger('focus')
+//   })
