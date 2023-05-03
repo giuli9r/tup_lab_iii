@@ -1,4 +1,7 @@
-console.log("Script loaded");
+console.log("Script loaded");  // init
+
+// VARIABLES GLOBALES
+var _pressedBtnMeGusta = false;
 
 // FUNCIONES
 let followUser = function () {
@@ -30,8 +33,16 @@ let login = function () {
     }  else {
         alert("Por favor, ingrese un usuario.");
     }
-    console.log("logueado...");
 }
+
+let modalTextoVacio = function(){
+
+}
+
+let modalUserVacio = function(){
+
+}
+
 
 let agregarComentario = function (evento) {
     //Evito que recargue la página
@@ -39,7 +50,18 @@ let agregarComentario = function (evento) {
 
     //Obtengo los valores ingresados
     let textoComentario =  document.getElementById('txtComentario').value.trim();
-    if (textoComentario == '') return;
+    let inputUser = document.getElementById("inpUsuario").value;
+
+    if (textoComentario == '') {
+        modalTextoVacio(); 
+        return;
+    }
+
+    if (inputUser == '') {
+        modalUserVacio(); 
+        return;
+    }
+
     //Agrego el feedback a la página
     let texto = document.createTextNode('Anónimo - ' + textoComentario);
     let parrafo = document.createElement('p')
@@ -48,6 +70,14 @@ let agregarComentario = function (evento) {
     document.getElementById('txtComentario').value = '';
 }
 
+let incrementaMeGusta = function () {
+
+    if (!_pressedBtnMeGusta) {
+        let resultado = parseInt((document.getElementById('likes')).innerText.match(/\d+/)[0]) + 1;
+        document.getElementById('likes').innerText = resultado + ' likes';
+        _pressedBtnMeGusta = true;
+    }
+}
 
 // BOTONES
 let btnSeguir = document.getElementById("btnSeguir");
@@ -60,3 +90,6 @@ btnLogin.addEventListener('click', login);
 
 let btnComentar = document.getElementById('boton-comentar');
 btnComentar.addEventListener('click', agregarComentario);
+
+let btnMeGusta = document.getElementById('btnMeGusta');
+btnMeGusta.addEventListener('click', incrementaMeGusta);
