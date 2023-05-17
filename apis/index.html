@@ -5,6 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APIs</title>
+    <style>
+        body {
+            width: 100vw;
+        }
+
+        #grid-layout {
+            display: grid;
+            grid-template-areas: 'title title'
+                            'body body'
+                            'user user';
+            grid-template-rows: auto auto;
+            grid-template-columns: auto auto;
+            height: 700px;
+        }
+
+        .caja {
+            border: 10px solid;
+            text-align: center;
+        }
+
+        #caja1 {
+            grid-area: title;
+        }
+
+        #caja2 {
+            grid-area: body;
+        }
+
+        #caja3 {
+            grid-area: user;
+        }
+
+
+    </style>
 </head>
 <body>
     <div>
@@ -12,6 +46,13 @@
         <p>Introduccion a APIs by Lucas Moy</p>
         <h4>APIs en Javascript</h4>
         <p>Fetch vs AJAX</p>
+
+        <div id="grid-layout">
+            <div class="caja" id="caja1">Title</div>
+            <div class="caja" id="caja2">Body</div>
+            <div class="caja" id="caja3">User ID</div>
+        </div>
+
 
         <div>    
             <b> Title: </b> <span id="title"> </span> </br>
