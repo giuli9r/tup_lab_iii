@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(14, 26, 30);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.display-on{
+    display: initial;
+}
+  
+  .display-off {
+    display: none;
+}
+
+.grid-layout{
+    height: 600px;
+    display: grid;
+    grid-template-areas: 'cabecera cabecera cabecera'
+                         'input1 input2 operaciones'
+                          'btnCalcular btnCalcular operaciones';
+
+    grid-template-columns: auto auto 40%;
+    grid-template-rows: 35% 35% auto ;
+    /* grid-template-columns: auto auto auto; */
+    background-color: rgb(173, 189, 225);
+    padding: 5px;
+}
+
+.caja{
+    border: 2px solid rgb(170, 234, 147);
+    background-color: rgb(191 191 191);
+    margin: 3px;
+    text-align: center;
+}
+
+.cabecera{
+    grid-area: cabecera;
+}
+
+.input1{
+    grid-area: input1;
+    line-height: 90px;
+    background-color: rgb(242, 237, 177);
+
+}
+
+.input2{
+    grid-area: input2;
+    line-height: 90px;
+    background-color: rgb(242, 237, 177);
+
+}
+
+.operaciones{
+    grid-area: operaciones;
+    background-color: rgb(242, 237, 177);
+
+}
+
+.btnCalcularCSS{
+    grid-area: btnCalcular;
+    background-color: rgb(177, 203, 242);
+    top: -50%;
+
+}
+
