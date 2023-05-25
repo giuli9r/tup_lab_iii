@@ -19,7 +19,7 @@
                          'menu menu'
                          'imagen info'
                          'feedback feedback';
-    grid-template-rows: 8% 30% auto 40%;
+    grid-template-rows: 8% 40% auto 40%;
     grid-template-columns: 20% auto;
     height: 600px;
 }

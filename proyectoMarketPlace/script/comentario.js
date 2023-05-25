@@ -28,4 +28,3 @@ let postComment = function () {
 
 let btnEnviar = document.getElementById("enviar");
 btnEnviar.addEventListener('click', postComment);
-
