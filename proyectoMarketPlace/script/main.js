@@ -1,13 +1,5 @@
 console.log("api cargada");
 
-/**
- En la pantalla principal, donde se encuentra toda la lista de productos, agregarás un nuevo campo arriba en donde 
- se indicará la cantidad de notebooks que actualmente están en ventas. ¿Cómo obtendrás ese dato?
- Si accedes a https://my-json-server.typicode.com/agustinruatta/fake_json_server_db/statistics podrás ver que retorna un JSON,
- el cual tiene un campo amount_of_products, que indica la cantidad de productos en oferta. Es por eso que, cuando cargues la página, 
- deberás hacer una consulta GET a dicha URL, obtener la cantidad total de productos, y mostrarla en tu HTML.
- */
-
 function cargarJson() {
     fetch('https://my-json-server.typicode.com/agustinruatta/fake_json_server_db/statistics')
     .then(response => response.json())
@@ -20,3 +12,27 @@ let jsonCargado = function (json) {
     span.innerText = json.amount_of_products;
 }
 cargarJson();
+
+
+function cargarJson2() {
+    fetch('https://my-json-server.typicode.com/agustinruatta/fake_json_server_db/products/1')
+    .then(response => response.json())
+    .then (jsonDevuelto);
+}
+let jsonDevuelto = function (json) {
+    console.log(json);
+    
+    let title = json.title;
+    let description = document.createTextNode(json.description);
+    let parrafoDescription = document.createElement('p')
+    parrafoDescription.appendChild(description);
+    document.getElementById('description').innerText = '';
+    document.getElementById('description').appendChild(parrafoDescription);
+
+    let price = document.createTextNode(json.notebooksTypes[0].price);
+    let image_url = document.createElement('image_url');
+    
+    document.getElementById('title-a').innerText = title;
+}
+
+cargarJson2();
