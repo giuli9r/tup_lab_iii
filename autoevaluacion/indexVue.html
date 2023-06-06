@@ -34,46 +34,43 @@
       <section id="detalles">
         <h3> DETALLES </h3>
         <div>
-          <h4 > Nacionalidad </h4>
+          <h4 class="destaca_titulo" > Nacionalidad </h4>
           <p> {{ nacionalidad }} </p>
           
           <!-- CONTACTO -->
-          <h4 id="contacto"> Contacto</h4>
+          <h4 class="destaca-titulo" id="contacto"> Contacto</h4>
           <ul>
             <li v-for="info in info_contacto"> {{ info }}</li>
           </ul>
 
           <!-- PERFIL -->
-          <h4 id="perfil"> Perfil</h4>
+          <h4 class="destaca_titulo" id="perfil"> Perfil</h4>
           <p class="p_grande p_angosto">
             {{ perfil }}
           </p>
 
           <!-- EDUCACION -->
-          <h4 id="educacion"> Educación</h4>
-          <h5 style="color: #333;">Ingenieria Civil. Abandonada </h5>
-          <p>
-            Universidad Nacional de Córdoba - FCEFyN
-          </p>
-          <h5 style="color: #333;">Analista en Sistmas. Abandonada </h5>
-          <p>
-            Universidad Nacional de Córdoba - FAMAF
-          </p>
-          <h5 style="color: rgb(14, 8, 51);"> Tecnicatura en Programación. En curso </h5>
-          <p>
-            Universidad Técnologica Nacional - FRSFco
-          </p>
-          
+
+           <h4 id="educacion" class="destaca_titulo" > Educación</h4>
+
+          <div v-for="info in educacion" class="p_chico" :key="info.id" > 
+            {{ info.institucion}}
+            <p class="destaca-carrera" >{{ info.carrera}} </p>
+            <p v-if="info.enCurso" class="p_chico">En Curso</p>
+            <p v-else  class="p_chico">Abandonada</p>
+
+          </div>          
+
           <!-- Experiencia Laboral -->
-          <h4 id="exp"> Experiencia Laboral </h4>
+          <h4 id="exp" class="destaca_titulo"> Experiencia Laboral </h4>
           <p>
             Pasantías en curso </br>
             Empresa: <a href="https://www.nexosoluciones.com.ar/" target="_blank" rel="noopener noreferrer">NexoSoluciones S.A </a></br>
           </p>
         </div>
       </section>
-      
-      <h4> texto normal </h4>
+
+      <button class="button" @click="alertFn" >Descargar CV en PDF</button>
     </div>
   </main>
   
