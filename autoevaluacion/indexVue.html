@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae</title> 
+   <!-- Import Styles -->
+   <link rel="stylesheet" href="style.css" />
+  <!-- Import Vue.js -->
+  <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+  <!-- Import Vue router -->
+
+
+
+</head>
+
+<body>
+  <main>
+    <div id="app">
+      <div class="nav-bar"></div>
+      
+      <h1> {{ nombre_alumno }}</h1>
+      <p class="p_grande" v-if="estudiante" > Estudiante Universitario </p>
+      <p class="p_grande" v-else > Docente Universitario </p>
+
+      <!-- links internos -->
+      <a href="#contacto">Contacto </a>
+      <a href="#perfil">perfil </a>
+      <a href="#educacion">educacion </a>
+      <a href="#exp">expe </a>
+      
+      
+      <section id="detalles">
+        <h3> DETALLES </h3>
+        <div>
+          <h4 > Nacionalidad </h4>
+          <p> {{ nacionalidad }} </p>
+          
+          <!-- CONTACTO -->
+          <h4 id="contacto"> Contacto</h4>
+          <ul>
+            <li v-for="info in info_contacto"> {{ info }}</li>
+          </ul>
+
+          <!-- PERFIL -->
+          <h4 id="perfil"> Perfil</h4>
+          <p class="p_grande p_angosto">
+            {{ perfil }}
+          </p>
+
+          <!-- EDUCACION -->
+          <h4 id="educacion"> Educación</h4>
+          <h5 style="color: #333;">Ingenieria Civil. Abandonada </h5>
+          <p>
+            Universidad Nacional de Córdoba - FCEFyN
+          </p>
+          <h5 style="color: #333;">Analista en Sistmas. Abandonada </h5>
+          <p>
+            Universidad Nacional de Córdoba - FAMAF
+          </p>
+          <h5 style="color: rgb(14, 8, 51);"> Tecnicatura en Programación. En curso </h5>
+          <p>
+            Universidad Técnologica Nacional - FRSFco
+          </p>
+          
+          <!-- Experiencia Laboral -->
+          <h4 id="exp"> Experiencia Laboral </h4>
+          <p>
+            Pasantías en curso </br>
+            Empresa: <a href="https://www.nexosoluciones.com.ar/" target="_blank" rel="noopener noreferrer">NexoSoluciones S.A </a></br>
+          </p>
+        </div>
+      </section>
+      
+      <h4> texto normal </h4>
+    </div>
+  </main>
+  
+</body>
+
+<!-- Import app -->
+<script src="main.js"></script>
+
+<!-- Mount app -->
+<script>
+  const mountedApp = app.mount('#app')
+</script>
+
+</html>
