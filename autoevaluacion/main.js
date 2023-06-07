@@ -16,7 +16,6 @@ const app = Vue.createApp ({
         }
     },
     methods: {
-
         alertFn (){
             alert(this.alerta);
         }
