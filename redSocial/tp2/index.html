@@ -13,96 +13,104 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-   <div class="modal2c" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" hidden>
-      <div class="modal-dialog" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Advertencia</h5>
-            <button id="btnClose" type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
-         <div class="modal-body" id="modalbody1">
-         
-         </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-primary" id="btnAceptar">Aceptar</button>
-         </div>
-      </div>
-      </div>
-   </div>
-
-   <div id="grid-uno">
-      <div class="colorAzulClaro" id="parteArriba">
-         <div  id="c1">
-            <img src="imagenes/undefined - Imgur.jpg.png" alt="Globo" id="imgGlobo"> 
-         </div>
-         <div  id="c2">
-            <input type="text" placeholder="Ingresa tu usuario..." id="inpUsuario">
-            <button class="login" id="btnLogin" hidden>Ingresar</button>
-         </div>
-      </div>
-      <div id="parteMedio">
-         <div  id="c3">
-            <img src="imagenes/99qgQJy.jpeg" alt="Imagen Jane Doe" id="imgJane">
-         </div>
-         <div  id="c4">
-            <h1>Jane Doe</h1>
-            <p><strong>Email:</strong> jane_doe@email.com</p>
-            <p><strong>Fecha de nacimiento:</strong> 01/05/1996</p>
-            <p><strong>Telefono:</strong> 918-936-9585</p>
-            <p><strong>Ciudad:</strong> Tokyo, Japon</p>
-            <p>Trabajando en <font color="grey">Lawn N</font></p>
-         </div>
-         <div  id="c5">
-            <button class="colorAzulClaro" id="btnSeguir">Seguir</button>
-         </div>
-      </div>
-      <div  id="abajo">
-         <div id="lateral-izquierdo">
-            <div id="c6">
-               <p>Publicado hace 1 semana</p>
-               <img src="imagenes/vecindadponja.jpeg" alt="vecindad ponja" id="imgVecindad"><br>
-               <div class="right">
-                  <button  id="btnMeGusta">Me gusta</button> 
-                  <p  id="likes">200 likes</p>
+   <div class="app">
+      <div class="modal2c" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" hidden>
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Advertencia</h5>
+                  <button id="btnClose" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
                </div>
-               <div id="parteComentarios">
-                  <p>Comentarios</p>
-                  <p><strong>Juan Perez</strong>  ¡Wow, esa foto de Tokio es impresionante!</p>
-                  <p><strong>Kathleen J Rennie</strong>  ¡Esta foto de Tokio es simplemente espectacular! Me Trae tantos recuerdos.</p>
-                  <div class="right" style="justify-content: left !important;">
-                     <p><font id="nombre-color">Diana Bell</font>  ¡Espero que algun dia pueda ver Tokio en persona!&nbsp;&nbsp;</p>
-                     <button id="boton-eliminar"><font color="red">Eliminar</font></button>
-                  </div>
+               <div class="modal-body" id="modalbody1">
+                  
                </div>
-               <div class="container-comentar">
-                  <div class="right">
-                     <textarea rows="4" cols="50" id="txtComentario" placeholder="Deja tu comentario..."  ></textarea>
-                     <button class="colorAzulClaro" id="boton-comentar">Comentar</button>
-                  </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="btnAceptar">Aceptar</button>
                </div>
             </div>
          </div>
       </div>
-      <div id="lateral-derecho">
-         <div id="c7">
-            <p id="sobre-mi">Sobre mi</p>
-            <p id="parrafo-largo">¡Hola a todos! Soy Jane, y actualmente vivo en la vibrante y emocionante ciudad de Tokio, Japon. Me Encanta capturar la zona urbana
-               a traves de mi lente, explorando  el contraste entre la arquitectura moderna y las tradiciones centenarias que conviven con esta
-               metropolis unida. Desde rascacielos delumbrantes y calles bulliciosas hasta templos serenos y jardines tranquilos, encuentro inspiracion
-               en cada rincon de esta increible ciudad.
-            </p>
+      
+      <div id="grid-uno">
+         <div class="colorAzulClaro" id="parteArriba">
+            <div  id="c1">
+               <img src="imagenes/undefined - Imgur.jpg.png" alt="Globo" id="imgGlobo"> 
+            </div>
+            <div  id="c2">
+               <input type="text" placeholder="Ingresa tu usuario..." id="inpUsuario">
+               <button class="login" id="btnLogin" hidden>Ingresar</button>
+            </div>
+         </div>
+         <div id="parteMedio">
+            <div  id="c3">
+               <img src="imagenes/99qgQJy.jpeg" alt="Imagen Jane Doe" id="imgJane">
+            </div>
+            <div  id="c4">
+               <h1>Jane Doe</h1>
+               <p><strong>Email:</strong> jane_doe@email.com</p>
+               <p><strong>Fecha de nacimiento:</strong> 01/05/1996</p>
+               <p><strong>Telefono:</strong> 918-936-9585</p>
+               <p><strong>Ciudad:</strong> Tokyo, Japon</p>
+               <p>Trabajando en <font color="grey">Lawn N</font></p>
+            </div>
+            <div  id="c5">
+               <button class="colorAzulClaro" id="btnSeguir">Seguir</button>
+            </div>
+         </div>
+         <div  id="abajo">
+            <div id="lateral-izquierdo">
+               <div id="c6">
+                  <p>Publicado hace 1 semana</p>
+                  <img src="imagenes/vecindadponja.jpeg" alt="vecindad ponja" id="imgVecindad"><br>
+                  <div class="right">
+                     <button  id="btnMeGusta">Me gusta</button> 
+                     <p  id="likes">200 likes</p>
+                  </div>
+                  <div id="parteComentarios">
+                     <p>Comentarios</p>
+                     <p><strong>Juan Perez</strong>  ¡Wow, esa foto de Tokio es impresionante!</p>
+                     <p><strong>Kathleen J Rennie</strong>  ¡Esta foto de Tokio es simplemente espectacular! Me Trae tantos recuerdos.</p>
+                     <div class="right" style="justify-content: left !important;">
+                        <p><font id="nombre-color">Diana Bell</font>  ¡Espero que algun dia pueda ver Tokio en persona!&nbsp;&nbsp;</p>
+                        <button id="boton-eliminar"><font color="red">Eliminar</font></button>
+                     </div>
+                  </div>
+                  <div class="container-comentar">
+                     <div class="right">
+                        <textarea rows="4" cols="50" id="txtComentario" placeholder="Deja tu comentario..."  ></textarea>
+                        <button class="colorAzulClaro" id="boton-comentar">Comentar</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="lateral-derecho">
+            <div id="c7">
+               <p id="sobre-mi">Sobre mi</p>
+               <p id="parrafo-largo">¡Hola a todos! Soy Jane, y actualmente vivo en la vibrante y emocionante ciudad de Tokio, Japon. Me Encanta capturar la zona urbana
+                  a traves de mi lente, explorando  el contraste entre la arquitectura moderna y las tradiciones centenarias que conviven con esta
+                  metropolis unida. Desde rascacielos delumbrantes y calles bulliciosas hasta templos serenos y jardines tranquilos, encuentro inspiracion
+                  en cada rincon de esta increible ciudad.
+               </p>
+            </div>
          </div>
       </div>
    </div>
-
+   
    <!-- Load scripts -->
    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-   <script src="app.js"></script>
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+   
+   <!-- Import app -->
+   <script src="app.js"></script>
+   <!-- Mount App -->
+   <script>
+      app.mount('#app')
+   </script>
+   
 </body>
 </html>
