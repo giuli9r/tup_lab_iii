@@ -50,19 +50,6 @@ let modalTextoVacio = function(){
     parrafo.appendChild(texto);
     modalbody.appendChild(parrafo);
     goTo();
-
-
-    // let p = document.getElementById('whatever');
-    // element.classList.remove("hidden");
-    // $('#myModal').on('shown.bs.modal', function () {
-    //     $('#myInput').trigger('focus')
-    //   })
-
-    //   $('#myModal').modal.show();
-    // $('#myModal').modal({ show: true});
-    // $('#myModal').modal('toggle');
-    // let myModal = bootstrap.Modal.getOrCreateInstance("#myModal");
-    // myModal.show();
 }
 
 let modalUserVacio = function(){
@@ -76,15 +63,6 @@ let modalUserVacio = function(){
     var element = document.getElementById("modal2");
     element.removeAttribute("hidden");
     goTo();
-
-
-    // element.classList.remove("hidden");
-    // $('#myModal').on('shown.bs.modal', function () {
-    //     $('#myInput').trigger('focus')
-    //   });
-    // $('#myModal').modal('show')    
-    // let myModal = bootstrap.Modal.getOrCreateInstance("#myModal");
-    // myModal.show();
 }
 
 let esconderModal = function () {
@@ -166,7 +144,4 @@ btnClose.addEventListener('click', esconderModal);
 
 let btnEliminar = document.getElementById('boton-eliminar');
 btnEliminar.addEventListener('click', eliminarComentario)
-// test modal
-// $('#myModal').on('shown.bs.modal', function () {
-//     $('#myInput').trigger('focus')
-//   })
+
