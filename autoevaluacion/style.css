@@ -65,3 +65,30 @@ p {
   text-align: center;
   cursor: pointer;
 }
+
+.cuadro {
+  margin: 25px 100px;
+  float: right;
+  border: 1px solid #d8d8d8;
+  padding: 10px 30px;
+  background-color: white;
+  -webkit-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 2px 15px -12px rgba(0, 0, 0, 0.57);
+  box-shadow: 2px 15px -12px rgba(0, 0, 0, 0.57);
+}
+
+.color-circle {
+  width: 10px;
+  height: 10px;
+  margin-top: 8px;
+  border: 2px solid #c7c7c7;
+  border-radius: 50%;
+  float: right;
+  background-color: rgb(233, 151, 151);
+}
+
+
+.dark-mode {
+  background-color: rgb(27, 27, 27);
+  color: white;
+}

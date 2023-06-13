@@ -14,60 +14,80 @@
 <body>
   <main>
     <div id="app">
-      <div class="nav-bar"></div>
-      
-      <h1> {{ nombre_alumno }}</h1>
-      <p class="p_grande" v-if="estudiante" > Estudiante Universitario </p>
-      <p class="p_grande" v-else > Docente Universitario </p>
+      <div :style="{ backgroundColor: colorBG }">
+        <div class="nav-bar"></div>
 
-      <!-- links internos -->
-      <a href="#contacto">Contacto </a>
-      <a href="#perfil">perfil </a>
-      <a href="#educacion">educacion </a>
-      <a href="#exp">expe </a>
-      
-      
-      <section id="detalles">
-        <h3> DETALLES </h3>
-        <div>
-          <h4 class="destaca_titulo" > Nacionalidad - {{ nacionalidad }}  </h4>
-          <!-- <p> {{ nacionalidad }} </p> -->
-          
-          <!-- CONTACTO -->
-          <h4 class="destaca_titulo" id="contacto"> Contacto</h4>
-          <ul>
-            <li v-for="info in info_contacto"> {{ info }}</li>
-          </ul>
-
-          <!-- PERFIL -->
-          <h4 class="destaca_titulo" id="perfil"> Perfil</h4>
-          <p class="p_grande p_angosto">
-            {{ perfil }}
-          </p>
-
-          <!-- EDUCACION -->
-
-           <h4 id="educacion" class="destaca_titulo" > Educación</h4>
-
-          <div v-for="info in educacion" class="p_chico" :key="info.id" > 
-            {{ info.institucion}}
-            <p class="destaca-carrera" >{{ info.carrera}} </p>
-            <p v-if="info.enCurso" class="p_chico">En Curso</p>
-            <p v-else  class="p_chico">Abandonada</p>
-
-          </div>          
-
-          <!-- Experiencia Laboral -->
-          <h4 id="exp" class="destaca_titulo"> Experiencia Laboral </h4>
-          <p>
-            Pasantías en curso </br>
-            Empresa: <a href="https://www.nexosoluciones.com.ar/" target="_blank" rel="noopener noreferrer">NexoSoluciones S.A </a></br>
-          </p>
+        <div 
+        @mouseover="updateThis" 
+        @mouseleave="updateWhite" 
+        class="color-circle">
         </div>
-      </section>
 
-      <button class="button" @click="alertFn" >Descargar CV en PDF</button>
-    </div>
+        <h1> {{ nombre_alumno }}</h1> 
+        <p style="color: white"> Legajo 15813 </p>
+        <p class="p_grande" v-if="estudiante" > Estudiante Universitario </p>
+        <p class="p_grande" v-else > Docente Universitario </p>
+
+        <!-- links internos -->
+        <a href="#contacto">Contacto </a>
+        <a href="#perfil">Perfil </a>
+        <a href="#educacion">Educacion </a>
+        <a href="#exp">Expe </a>
+        
+        
+        <section id="detalles">
+          <h3> DETALLES </h3>
+          <div>
+            <h4 class="destaca_titulo" > Nacionalidad - {{ nacionalidad }}  </h4>
+            <!-- <p> {{ nacionalidad }} </p> -->
+            
+            <!-- CONTACTO -->
+            <h4 class="destaca_titulo" id="contacto"> Contacto</h4>
+            <ul>
+              <li v-for="info in info_contacto"> {{ info }}</li>
+            </ul>
+
+            <!-- PERFIL -->
+            <h4 class="destaca_titulo" id="perfil"> Perfil</h4>
+            <p class="p_grande p_angosto">
+              {{ perfil }}
+            </p>
+
+            <!-- EDUCACION -->
+
+            <h4 id="educacion" class="destaca_titulo" > Educación</h4>
+
+            <div v-for="info in educacion" class="p_chico" :key="info.id" > 
+              {{ info.institucion}}
+              <p class="destaca-carrera" >{{ info.carrera}} </p>
+              <p v-if="info.enCurso" class="p_chico">En Curso</p>
+              <p v-else  class="p_chico">Abandonada</p>
+
+            </div>          
+
+            <!-- Experiencia Laboral -->
+            <h4 id="exp" class="destaca_titulo"> Experiencia Laboral </h4>
+            <p>
+              Pasantías en curso </br>
+              Empresa: <a href="https://www.nexosoluciones.com.ar/" target="_blank" rel="noopener noreferrer">NexoSoluciones S.A </a></br>
+            </p>
+          </div>
+        </section>
+
+
+        <div class="cuadro">
+          <p v-if=" statusCode > 7">{{ mensaje3 }}</p>
+          <p v-else-if="statusCode > 1 ">{{ mensaje2 }}</p>
+          <p v-else="">{{ mensaje1 }}</p>
+        </div>
+
+        
+        <button class="button" @click="alertFn" >Descargar en PDF</button>
+        <button class="button donar" @click="pressBtn" >Click mE! </button>
+  
+
+      </div>
+  </div>
   </main>
   
 </body>
