@@ -3,7 +3,9 @@ const app = Vue.createApp ({
     data () {
         return {
             colorBG : "white",
+            styles: {},
             statusCode: 1,
+            limit: this.check(),
             mensaje1: " ← ←",
             mensaje2: " Clicks gratis! Sigue asi... ",
             mensaje3: " $ 10 / Click",
@@ -32,7 +34,22 @@ const app = Vue.createApp ({
         updateWhite () {
             this.colorBG= "white";
         },
-        
+        broke() {
+            console.log("in");
+            this.styles = {
+                color: "red",
+                fontSize: "25px"
+            };
+        },
+        fix() {
+            console.log("out");
+            this.styles = {
+                color: "blue",
+            };
+        },
+        check() {
+            return (this.statusCode > 9);
+        }
 
     }
 });

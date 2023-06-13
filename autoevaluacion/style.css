@@ -92,3 +92,8 @@ p {
   background-color: rgb(27, 27, 27);
   color: white;
 }
+
+.disabledButton {
+  background-color: #d8d8d8;
+  cursor: not-allowed;
+}

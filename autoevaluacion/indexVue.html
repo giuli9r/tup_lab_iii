@@ -27,12 +27,21 @@
         <p style="color: white"> Legajo 15813 </p>
         <p class="p_grande" v-if="estudiante" > Estudiante Universitario </p>
         <p class="p_grande" v-else > Docente Universitario </p>
+        
+        <div 
+        @mouseover="broke" 
+        @mouseleave="fix" 
+        class="color-circle">
+        </div>
 
         <!-- links internos -->
-        <a href="#contacto">Contacto </a>
-        <a href="#perfil">Perfil </a>
-        <a href="#educacion">Educacion </a>
-        <a href="#exp">Expe </a>
+        <div :style="{ styles }" >
+          Links  
+          <a href="#contacto">Contacto </a>
+          <a href="#perfil">Perfil </a>
+          <a href="#educacion">Educacion </a>
+          <a href="#exp">Expe </a>
+        </div>
         
         
         <section id="detalles">
@@ -83,7 +92,7 @@
 
         
         <button class="button" @click="alertFn" >Descargar en PDF</button>
-        <button class="button donar" @click="pressBtn" >Click mE! </button>
+        <button class="button donar" @click="pressBtn" :class="[ limit ? disabledButton : '']" >Click mE! </button>
   
 
       </div>
