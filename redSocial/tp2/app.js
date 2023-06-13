@@ -1,7 +1,17 @@
 const app = Vue.createApp ({
     data: function() {
         return {
-            algo: "algo"
+
+            algo: "algo",
+            nombre : "Jane Doe",
+            email : " ",
+            fecha_nacimiento: " ",
+            telefono: " ",
+            ciudad : " ",
+            image: "/ruta",
+
+            parrafo_sobremi: ""
+
         }
     },
     methods: {
