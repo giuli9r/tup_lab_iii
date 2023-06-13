@@ -1,4 +1,3 @@
-// console.log("loaded");
 const app = Vue.createApp ({
     data () {
         return {
