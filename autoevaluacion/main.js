@@ -11,7 +11,8 @@ const app = Vue.createApp ({
             mensaje3: " $ 10 / Click",
             alerta: "Descargado correctamente!",
             estudiante: true,
-            nombre_alumno: "Giuliano Rossetti",
+            nombre_alumno: "Giuliano",
+            apellido_alumno: "Rossetti",
             nacionalidad: "Argentino" ,
             info_contacto: ['Calle Iturraspe 20XX, 2400, San Francisco Córdoba', 'giuli.rossetti9@gmail.com', '3564 100000' ],
             perfil: `Buscando un desarrollo profesional en el backend.`,
@@ -51,5 +52,10 @@ const app = Vue.createApp ({
             return (this.statusCode > 9);
         }
 
+    },
+    computed: {
+        nombreCompleto() {
+            return this.nombre_alumno + ' ' + this.apellido_alumno;
+        }
     }
 });
