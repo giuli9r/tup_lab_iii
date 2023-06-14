@@ -37,13 +37,7 @@
       
       <div id="grid-uno">
          <div class="colorAzulClaro" id="parteArriba">
-            <div  id="c1">
-               <img src="imagenes/undefined - Imgur.jpg.png" alt="Globo" id="imgGlobo"> 
-            </div>
-            <div  id="c2">
-               <input type="text" placeholder="Ingresa tu usuario..." id="inpUsuario">
-               <button class="login" id="btnLogin" hidden>Ingresar</button>
-            </div>
+            <nav-input @guarda-user="guardaUserMain" ></nav-input>
          </div>
          <div id="parteMedio">
             <div  id="c3">
@@ -96,6 +90,7 @@
    <!-- Import Components -->
    <script src="./componentes/ComentarioForm.js"></script>
    <script src="./componentes/ComentarioList.js"></script>
+   <script src="./componentes/NavInputComponente.js"></script>
 
    <!-- Mount App -->
    <script>

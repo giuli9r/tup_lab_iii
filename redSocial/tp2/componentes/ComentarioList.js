@@ -12,14 +12,10 @@ app.component('comentario-list', {
         <p>Comentarios</p>
         <p><strong>Juan Perez</strong>  ¡Wow, esa foto de Tokio es impresionante!</p>
         <p><strong>Kathleen J Rennie</strong>  ¡Esta foto de Tokio es simplemente espectacular! Me Trae tantos recuerdos.</p>
-        <div class="right" style="justify-content: left !important;">
-            <p><font id="nombre-color">Diana Bell</font>  ¡Espero que algun dia pueda ver Tokio en persona!&nbsp;&nbsp;</p> 
-            <button id="boton-eliminar" @click="deleteComentario"><font color="red">Eliminar</font></button>
-        </div>
         
         <ul style="padding: 0px;" v-for="(comentario, index) of comentarios" :key="index" >
             <p style="justify-content: left !important;"><strong style="color: blue;">{{comentario.nombreUsuario}} </strong>  {{comentario.txtComentario}}
-            <button id="boton-eliminar" @click="deleteComentario" ><font color="red">Eliminar</font></button></p>
+            <button id="boton-eliminar" @click="deleteComentario(index)" ><font color="red">Eliminar</font></button></p>
             <br>
         </ul>
 
@@ -31,8 +27,9 @@ app.component('comentario-list', {
         }
     },
     methods: {
-        deleteComentario() {
-            console.log("Eliminar pressiondado");
+        deleteComentario(index) {
+            this.comentarios.splice(index, 1);
+            this.$emit('eliminar-main' , index);
         }
     }
 });

@@ -12,6 +12,7 @@ const app = Vue.createApp ({
 
             parrafo_sobremi: "",
             
+            nombreUsuario: "Anónimo",
             siguiendo: false,
             btnSeguirText: "Seguir",
             styleBtnSeguir : { 'background-color': 'blue', 'box-shadow': '5px 5px 10px 2px MediumSlateBlue'},
@@ -19,7 +20,7 @@ const app = Vue.createApp ({
             btnMeGustaText: "Me Gusta",
             cantidadLikes : 200,
             shadow: {},
-            comentarios: [],
+            comentarios: [ { nombreUsuario : "Diana Bell" , txtComentario: "¡Espero que algun dia pueda ver Tokio en persona!"  }],
 
         }
     },
@@ -67,14 +68,15 @@ const app = Vue.createApp ({
             }
         },
         addComentario(comentario) {
-            console.log("addComentario triggered");
             this.comentarios.push(comentario);
-            console.log("comentario pushed desde main.");
-            console.log(this.comentarios[0]);
-
-            // this.$emit("appendComentario",this.comentarios[0]);
         }, 
-        
+        guardaUserMain(nombre){
+            this.nombreUsuario = nombre;
+        },
+        eliminarMain(index){
+            this.comentarios.splice(index, 1);
+        }
+
     }
 });
 

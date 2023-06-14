@@ -16,16 +16,16 @@ app.component('comentario-form', {
     },
     methods: {
         onSubmit() {
+
             let comentarioNuevo = {
                 nombreUsuario: this.nombreUsuario,
                 txtComentario: this.txtComentario
             }
             this.$emit('comentario-submitted', comentarioNuevo);
-
             this.txtComentario= ''
-            console.log("comentario: ");
-            console.log(comentarioNuevo.txtComentario);
-
+        },
+        guardaUserComentario(nombre){
+            this.nombreUsuario = nombre;
         }
     }
 
