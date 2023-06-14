@@ -21,6 +21,12 @@ app.component('comentario-form', {
                 nombreUsuario: this.nombreUsuario,
                 txtComentario: this.txtComentario
             }
+            if (this.txtComentario.trim() == '') {
+                alert("Por favor, ingrese un texto antes de comentar");
+                this.txtComentario= ''
+                return;
+            }
+            
             this.$emit('comentario-submitted', comentarioNuevo);
             this.txtComentario= ''
         },

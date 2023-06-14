@@ -9,9 +9,10 @@ const app = Vue.createApp ({
             telefono: " ",
             ciudad : " ",
             image: "/ruta",
-
-            parrafo_sobremi: "",
-            
+            parrafo_sobremi: `¡Hola a todos! Soy Jane, y actualmente vivo en la vibrante y emocionante ciudad de Tokio, Japon. Me Encanta capturar la zona urbana
+            a traves de mi lente, explorando  el contraste entre la arquitectura moderna y las tradiciones centenarias que conviven con esta
+            metropolis unida. Desde rascacielos delumbrantes y calles bulliciosas hasta templos serenos y jardines tranquilos, encuentro inspiracion
+            en cada rincon de esta increible ciudad.`,
             nombreUsuario: "Anónimo",
             siguiendo: false,
             btnSeguirText: "Seguir",
