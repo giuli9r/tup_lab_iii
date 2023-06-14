@@ -1,5 +1,5 @@
 const app = Vue.createApp ({
-    data: function() {
+    data() {
         return {
 
             algo: "algo",
@@ -10,14 +10,67 @@ const app = Vue.createApp ({
             ciudad : " ",
             image: "/ruta",
 
-            parrafo_sobremi: ""
+            parrafo_sobremi: "",
+            
+            siguiendo: false,
+            btnSeguirText: "Seguir",
+            styleBtnSeguir : { 'background-color': 'blue', 'box-shadow': '5px 5px 10px 2px MediumSlateBlue'},
+            liked: false,
+            btnMeGustaText: "Me Gusta",
+            cantidadLikes : 200,
+            shadow: {},
+            comentarios: [],
+
 
         }
     },
     methods: {
         someMethod(){
             // code here..
-        }
+        },
+        shadowEffect(){
+            this.shadow = {
+                'filter': 'drop-shadow(0 0 0.75rem cornflowerblue)'
+            }
+        },
+        shadowDelete(){
+            this.shadow = { }
+        },
+        updateBtnSeguir() {
+            if ( !this.siguiendo ) {
+                this.btnSeguirText = "Dejar de seguir";
+                // bind class
+                this.styleBtnSeguir = {
+                    'font-size': "14px",
+                    'background-color': 'red'
+                    };
+            } else {
+                this.btnSeguirText = "Seguir";
+                // bind class
+                this.styleBtnSeguir = {
+                    'background-color': 'blue',
+                    'box-shadow': '5px 5px 10px 2px MediumSlateBlue'
+                    
+                };
+            }
+            this.siguiendo = !this.siguiendo;
+        },
+        controlarLikes() {
+            if (!this.liked) {
+                this.cantidadLikes++;
+                this.liked = true;
+                this.btnMeGustaText = 'No me gusta';
+            }
+            else{
+                this.cantidadLikes--;
+                this.liked = false;
+                this.btnMeGustaText = 'Me Gusta';
+            }
+        },
+        agregarComentario(comentario) {
+            this.comentarios.push(comentario);
+        }, 
+        
     }
 });
 
