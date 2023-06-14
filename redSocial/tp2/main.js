@@ -4,14 +4,15 @@ const app = Vue.createApp ({
 
             algo: "algo",
             nombre : "Jane Doe",
-            email : "jane_doe@email.com",
-            fecha_nacimiento: "01/05/1996",
-            telefono: " 918-936-9585",
-            ciudad : " Tokyo, Japon",
-            imageJaneDoe: "imagenes/99qgQJy.jpeg",
-
-            parrafo_sobremi: "",
-            
+            email : " ",
+            fecha_nacimiento: " ",
+            telefono: " ",
+            ciudad : " ",
+            image: "/ruta",
+            parrafo_sobremi: `¡Hola a todos! Soy Jane, y actualmente vivo en la vibrante y emocionante ciudad de Tokio, Japon. Me Encanta capturar la zona urbana
+            a traves de mi lente, explorando  el contraste entre la arquitectura moderna y las tradiciones centenarias que conviven con esta
+            metropolis unida. Desde rascacielos delumbrantes y calles bulliciosas hasta templos serenos y jardines tranquilos, encuentro inspiracion
+            en cada rincon de esta increible ciudad.`,
             nombreUsuario: "Anónimo",
             siguiendo: false,
             btnSeguirText: "Seguir",
