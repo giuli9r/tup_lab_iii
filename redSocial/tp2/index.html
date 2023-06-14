@@ -11,9 +11,10 @@
    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@700&family=Mulish:ital,wght@1,300&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="style.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-   <div class="app">
+   <div id="app">
       
       <div class="modal2c" id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" hidden>
          <div class="modal-dialog" role="document">
@@ -46,14 +47,14 @@
          </div>
          <div id="parteMedio">
             <div  id="c3">
-               <img src="imagenes/99qgQJy.jpeg" alt="Imagen Jane Doe" id="imgJane">
+               <img :src="imageJaneDoe" alt="Imagen Jane Doe" id="imgJane">
             </div>
             <div  id="c4">
-               <h1>Jane Doe</h1>
-               <p><strong>Email:</strong> jane_doe@email.com</p>
-               <p><strong>Fecha de nacimiento:</strong> 01/05/1996</p>
-               <p><strong>Telefono:</strong> 918-936-9585</p>
-               <p><strong>Ciudad:</strong> Tokyo, Japon</p>
+               <h1>{{nombre}}</h1>
+               <p><strong>Email:</strong> {{email}}</p>
+               <p><strong>Fecha de nacimiento:</strong> {{fecha_nacimiento}}</p>
+               <p><strong>Telefono:</strong>{{telefono}}</p>
+               <p><strong>Ciudad:</strong>{{ciudad}}</p>
                <p>Trabajando en <font color="grey">Lawn N</font></p>
             </div>
             <div  id="c5">
@@ -90,10 +91,7 @@
          <div id="lateral-derecho">
             <div id="c7">
                <p id="sobre-mi">Sobre mi</p>
-               <p id="parrafo-largo">¡Hola a todos! Soy Jane, y actualmente vivo en la vibrante y emocionante ciudad de Tokio, Japon. Me Encanta capturar la zona urbana
-                  a traves de mi lente, explorando  el contraste entre la arquitectura moderna y las tradiciones centenarias que conviven con esta
-                  metropolis unida. Desde rascacielos delumbrantes y calles bulliciosas hasta templos serenos y jardines tranquilos, encuentro inspiracion
-                  en cada rincon de esta increible ciudad.
+               <p id="parrafo-largo">{{parrafo_sobremi}}
                </p>
             </div>
          </div>
@@ -110,7 +108,7 @@
    <script src="app.js"></script>
    <!-- Mount App -->
    <script>
-      app.mount('#app')
+      const mountedApp= app.mount('#app')
    </script>
    
 </body>
