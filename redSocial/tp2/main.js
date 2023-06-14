@@ -4,11 +4,11 @@ const app = Vue.createApp ({
 
             algo: "algo",
             nombre : "Jane Doe",
-            email : " ",
-            fecha_nacimiento: " ",
-            telefono: " ",
-            ciudad : " ",
-            image: "/ruta",
+            email : "jane_doe@email.com",
+            fecha_nacimiento: "01/05/1996",
+            telefono: " 918-936-9585",
+            ciudad : " Tokyo, Japon",
+            imageJaneDoe: "imagenes/99qgQJy.jpeg",
 
             parrafo_sobremi: "",
             
