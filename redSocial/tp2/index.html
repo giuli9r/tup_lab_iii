@@ -41,14 +41,14 @@
          </div>
          <div id="parteMedio">
             <div  id="c3">
-               <img src="imagenes/99qgQJy.jpeg" alt="Imagen Jane Doe" id="imgJane" @mouseover="shadowEffect" :style="shadow" @mouseleave="shadowDelete">
+               <img :src="imageJaneDoe" alt="Imagen Jane Doe" id="imgJane">
             </div>
             <div  id="c4">
-               <h1>Jane Doe</h1>
-               <p><strong>Email:</strong> jane_doe@email.com</p>
-               <p><strong>Fecha de nacimiento:</strong> 01/05/1996</p>
-               <p><strong>Telefono:</strong> 918-936-9585</p>
-               <p><strong>Ciudad:</strong> Tokyo, Japon</p>
+               <h1>{{nombre}}</h1>
+               <p><strong>Email:</strong> {{email}}</p>
+               <p><strong>Fecha de nacimiento:</strong> {{fecha_nacimiento}}</p>
+               <p><strong>Telefono:</strong>{{telefono}}</p>
+               <p><strong>Ciudad:</strong>{{ciudad}}</p>
                <p>Trabajando en <font color="grey">Lawn N</font></p>
             </div>
             <div  id="c5">
@@ -75,10 +75,7 @@
          <div id="lateral-derecho">
             <div id="c7">
                <p id="sobre-mi">Sobre mi</p>
-               <p id="parrafo-largo">¡Hola a todos! Soy Jane, y actualmente vivo en la vibrante y emocionante ciudad de Tokio, Japon. Me Encanta capturar la zona urbana
-                  a traves de mi lente, explorando  el contraste entre la arquitectura moderna y las tradiciones centenarias que conviven con esta
-                  metropolis unida. Desde rascacielos delumbrantes y calles bulliciosas hasta templos serenos y jardines tranquilos, encuentro inspiracion
-                  en cada rincon de esta increible ciudad.
+               <p id="parrafo-largo">{{parrafo_sobremi}}
                </p>
             </div>
          </div>
