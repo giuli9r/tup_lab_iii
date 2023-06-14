@@ -14,18 +14,10 @@ body{
   /* border: 1px black solid; */
   row-gap: 70px;
 }
-.colorAzulClaro{
- background-color: rgba(14, 122, 237, 0.951);
-}
 
 .container-comentar{
   padding: 12px;
   margin: 10px;
-}
-
-.unfollow{
-  font-size: 14px !important;
-  background-color:rgba(194, 66, 57, 0.951) !important;
 }
 
 #parteArriba{
@@ -83,6 +75,15 @@ body{
   background-color:rgba(14, 122, 237, 0.951);
   font-size: 25px;
   color: white;
+}
+
+.colorAzulClaro{
+  background-color: rgba(14, 122, 237, 0.951);
+ }
+
+ .unfollow{
+  font-size: 14px !important;
+  background-color:rgba(194, 66, 57, 0.951) !important;
 }
 .shadow {
   box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
