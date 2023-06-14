@@ -41,7 +41,7 @@
          </div>
          <div id="parteMedio">
             <div  id="c3">
-               <img :src="imageJaneDoe" alt="Imagen Jane Doe" id="imgJane">
+               <img :src="image" alt="Imagen Jane Doe" id="imgJane"  @mouseover="shadowEffect" :style="shadow" @mouseleave="shadowDelete" >
             </div>
             <div  id="c4">
                <h1>{{nombre}}</h1>
