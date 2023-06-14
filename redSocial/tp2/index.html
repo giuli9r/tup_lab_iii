@@ -83,7 +83,7 @@
                   </div> -->
 
                   <!-- CONTAINER COMENTARIO -->
-                  <comentario-list :comentarios="reviews"></comentario-list>
+                  <!-- <comentario-list :comentarios="reviews"></comentario-list> -->
 
                   <!-- AGREGAR COMENTARIO -->
                   <!-- <div class="container-comentar">
@@ -92,7 +92,9 @@
                         <button class="colorAzulClaro" id="boton-comentar">Comentar</button>
                      </div>
                   </div> -->
-                  <container-comentar @comentario-agregado="agregarComentario"></container-comentar>
+
+                  <comentario-list :comentarios="comentarios"></comentario-list>
+                  <comentario-form  @comentario-submitted="addComentario"></comentario-form>
                   <!-- comentario -->
 
                </div>
@@ -114,7 +116,7 @@
    <!-- Import app -->
    <script src="main.js"></script>
    <!-- Import Components -->
-   <script src="./componentes/ComentarioComponente.js"></script>
+   <script src="./componentes/ComentarioForm.js"></script>
    <script src="./componentes/ComentarioList.js"></script>
 
    <!-- Mount App -->

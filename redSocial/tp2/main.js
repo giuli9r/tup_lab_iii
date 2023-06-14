@@ -21,7 +21,6 @@ const app = Vue.createApp ({
             shadow: {},
             comentarios: [],
 
-
         }
     },
     methods: {
@@ -67,8 +66,13 @@ const app = Vue.createApp ({
                 this.btnMeGustaText = 'Me Gusta';
             }
         },
-        agregarComentario(comentario) {
+        addComentario(comentario) {
+            console.log("addComentario triggered");
             this.comentarios.push(comentario);
+            console.log("comentario pushed desde main.");
+            console.log(this.comentarios[0]);
+
+            // this.$emit("appendComentario",this.comentarios[0]);
         }, 
         
     }

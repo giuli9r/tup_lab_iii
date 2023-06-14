@@ -1,7 +1,7 @@
-app.component('container-comentar', {
+app.component('comentario-form', {
     template: 
     /*html */
-    `<form class="container-comentar" @submit.prevent="onSubmit" >
+    `<form class="comentario-form" @submit.prevent="onSubmit" >
         <div class="right">
             <textarea rows="4" cols="50" id="txtComentario" v-model="txtComentario" placeholder="Deja tu comentario..."  ></textarea>
             <button class="colorAzulClaro" id="boton-comentar" type="submit" >Comentar</button>
@@ -10,18 +10,22 @@ app.component('container-comentar', {
     ,
     data() {
         return {
-            nombreUsuario: '',
+            nombreUsuario: 'Giuliano',
             txtComentario: '',
         }
     },
     methods: {
         onSubmit() {
             let comentarioNuevo = {
+                nombreUsuario: this.nombreUsuario,
                 txtComentario: this.txtComentario
             }
-            this.$emit('comentario-agregado', comentarioNuevo);
+            this.$emit('comentario-submitted', comentarioNuevo);
 
             this.txtComentario= ''
+            console.log("comentario: ");
+            console.log(comentarioNuevo.txtComentario);
+
         }
     }
 
